@@ -1,0 +1,18 @@
+{
+  "file": "data\\graphic\\player_01.png",
+
+  "frame": {
+    "width": 64,
+    "height": 64,
+    "cols": 4,
+    "rows": 1
+  },
+
+  "animations": {
+    "flapping": {
+      "frames": [ 0, 1, 2, 3 ],
+      "interval": 0.100,
+      "loop": true
+    }
+  }
+}
