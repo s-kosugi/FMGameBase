@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6E8C9E6D-2C46-411F-9082-5975E06D8D56}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FMGameBase</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/D "DEBUG" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/D "DEBUG" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>..\DXLib_VC;C:\DXLib;src;%(AdditionalIncludeDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BaseObject\cAnimSpObject.cpp" />
+    <ClCompile Include="src\BaseObject\cSpriteObject.cpp" />
+    <ClCompile Include="src\BaseObject\cSurfaceObject.cpp" />
+    <ClCompile Include="src\BaseObject\cTransitionObject.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\BackGround\cBackGround.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\BomEffect\cBomEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\cEffectManager.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\cEffectObject.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\FlameEffect\cFlameEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\FlameHitEffect\cFlameHitEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\GetScoreEffect\cGetScoreEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\HitEffect\cHitEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\IceAttackEffect\cIceAttackEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\LandingEffect\cLandingEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Effect\SlashEffect\cSlashEffect.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Enemy\BlueFairy\cBlueFairy.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Enemy\cEnemyManager.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Enemy\IEnemyBase.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Enemy\RedFairy\cRedFairy.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\Player\cPlayer.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\SpEffect\BlueFairyDead\cBlueFairyDead.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\SpEffect\cSpEffectManager.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\SpEffect\RedFairyDead\cRedFairyDead.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\UI\cUIManager.cpp" />
+    <ClCompile Include="src\BaseObject\GameObject\UI\ScoreBoard\cScoreBoard.cpp" />
+    <ClCompile Include="src\BaseObject\TextObject\cTextObject.cpp" />
+    <ClCompile Include="src\cGame.cpp" />
+    <ClCompile Include="src\BaseObject\IBaseObject.cpp" />
+    <ClCompile Include="src\DrawCtrl\Camera\cCamera.cpp" />
+    <ClCompile Include="src\DrawCtrl\Model\cModel.cpp" />
+    <ClCompile Include="src\DrawCtrl\Sprite\cAnimSprite.cpp" />
+    <ClCompile Include="src\DrawCtrl\Text\cText.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\EffekseerTest\cEffekseerTest.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\IBaseScene.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\Pause\cPause.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\Result\cResult.cpp" />
+    <ClCompile Include="src\ScoreManager\cScoreManager.cpp" />
+    <ClCompile Include="src\Utility\CsvReader\cCsvReader.cpp" />
+    <ClCompile Include="src\DebugFunc\cDebugFunc.cpp" />
+    <ClCompile Include="src\DrawCtrl\Effect\cEffect.cpp" />
+    <ClCompile Include="src\DrawCtrl\IDrawBase.cpp" />
+    <ClCompile Include="src\DrawCtrl\Surface\cSurface.cpp" />
+    <ClCompile Include="src\DrawCtrl\Transition\cTransition.cpp" />
+    <ClCompile Include="src\Input\cControllerManager.cpp" />
+    <ClCompile Include="src\Input\JoyPad\cJoyPad.cpp" />
+    <ClCompile Include="src\Input\Keyboard\cKeyboard.cpp" />
+    <ClCompile Include="src\Input\Mouse\cMouse.cpp" />
+    <ClCompile Include="src\Input\XController\cXController.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\DrawCtrl\cDrawCtrl.cpp" />
+    <ClCompile Include="src\DrawCtrl\Sprite\cSprite.cpp" />
+    <ClCompile Include="src\MovieManager\cMovieManager.cpp" />
+    <ClCompile Include="src\SceneManager\cSceneManager.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\GameMain\cGameMain.cpp" />
+    <ClCompile Include="src\SceneManager\Scene\Title\cTitle.cpp" />
+    <ClCompile Include="src\SoundCtrl\cSoundCtrl.cpp" />
+    <ClCompile Include="src\Utility\Easing\Easing.cpp" />
+    <ClCompile Include="src\Utility\Number\cNumber.cpp" />
+    <ClCompile Include="src\Utility\SaveData\cSaveData.cpp" />
+    <ClCompile Include="src\Utility\Timer\cTimer.cpp" />
+    <ClCompile Include="src\Utility\Vector\cVector2.cpp" />
+    <ClCompile Include="src\Utility\Vector\cVector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\BaseObject\cAnimSpObject.h" />
+    <ClInclude Include="src\BaseObject\cSpriteObject.h" />
+    <ClInclude Include="src\BaseObject\cSurfaceObject.h" />
+    <ClInclude Include="src\BaseObject\cTransitionObject.h" />
+    <ClInclude Include="src\BaseObject\GameObject\BackGround\cBackGround.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\BomEffect\cBomEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\cEffectManager.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\cEffectObject.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\EffectID.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\FlameEffect\cFlameEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\FlameHitEffect\cFlameHitEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\GetScoreEffect\cGetScoreEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\HitEffect\cHitEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\IceAttackEffect\cIceAttackEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\LandingEffect\cLandingEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Effect\SlashEffect\cSlashEffect.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Enemy\BlueFairy\cBlueFairy.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Enemy\cEnemyManager.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Enemy\EnemyID.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Enemy\IEnemyBase.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Enemy\RedFairy\cRedFairy.h" />
+    <ClInclude Include="src\BaseObject\GameObject\Player\cPlayer.h" />
+    <ClInclude Include="src\BaseObject\GameObject\SpEffect\BlueFairyDead\cBlueFairyDead.h" />
+    <ClInclude Include="src\BaseObject\GameObject\SpEffect\cSpEffectManager.h" />
+    <ClInclude Include="src\BaseObject\GameObject\SpEffect\RedFairyDead\cRedFairyDead.h" />
+    <ClInclude Include="src\BaseObject\GameObject\SpEffect\SpEffectID.h" />
+    <ClInclude Include="src\BaseObject\GameObject\UI\cUIManager.h" />
+    <ClInclude Include="src\BaseObject\GameObject\UI\ScoreBoard\cScoreBoard.h" />
+    <ClInclude Include="src\BaseObject\GameObject\UI\UIID.h" />
+    <ClInclude Include="src\BaseObject\TextObject\cTextObject.h" />
+    <ClInclude Include="src\DrawCtrl\Camera\cCamera.h" />
+    <ClInclude Include="src\DrawCtrl\Model\cModel.h" />
+    <ClInclude Include="src\DrawCtrl\Sprite\cAnimSprite.h" />
+    <ClInclude Include="src\DrawCtrl\Text\cText.h" />
+    <ClInclude Include="src\SceneManager\Scene\EffekseerTest\cEffekseerTest.h" />
+    <ClInclude Include="src\SceneManager\Scene\IBaseScene.h" />
+    <ClInclude Include="src\SceneManager\Scene\Pause\cPause.h" />
+    <ClInclude Include="src\SceneManager\Scene\Result\cResult.h" />
+    <ClInclude Include="src\ScoreManager\cScoreManager.h" />
+    <ClInclude Include="src\Utility\CsvReader\cCsvReader.h" />
+    <ClInclude Include="src\DebugFunc\cDebugFunc.h" />
+    <ClInclude Include="src\DrawCtrl\cDrawCtrl.h" />
+    <ClInclude Include="src\cGame.h" />
+    <ClInclude Include="src\BaseObject\IBaseObject.h" />
+    <ClInclude Include="src\DrawCtrl\Effect\cEffect.h" />
+    <ClInclude Include="src\DrawCtrl\IDrawBase.h" />
+    <ClInclude Include="src\DrawCtrl\Sprite\cSprite.h" />
+    <ClInclude Include="src\DrawCtrl\Surface\cSurface.h" />
+    <ClInclude Include="src\DrawCtrl\Transition\cTransition.h" />
+    <ClInclude Include="src\Input\cControllerManager.h" />
+    <ClInclude Include="src\Input\JoyPad\cJoyPad.h" />
+    <ClInclude Include="src\Input\Keyboard\cKeyboard.h" />
+    <ClInclude Include="src\Input\Mouse\cMouse.h" />
+    <ClInclude Include="src\Input\XController\cXController.h" />
+    <ClInclude Include="src\MovieManager\cMovieManager.h" />
+    <ClInclude Include="src\MovieManager\MovieID.h" />
+    <ClInclude Include="src\SceneManager\cSceneManager.h" />
+    <ClInclude Include="src\SceneManager\SceneID.h" />
+    <ClInclude Include="src\SceneManager\Scene\GameMain\cGameMain.h" />
+    <ClInclude Include="src\SceneManager\Scene\Title\cTitle.h" />
+    <ClInclude Include="src\SoundCtrl\cSoundCtrl.h" />
+    <ClInclude Include="src\SoundCtrl\SoundID.h" />
+    <ClInclude Include="src\Utility\Easing\Easing.h" />
+    <ClInclude Include="src\Utility\json_loader\picojson\picojson.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\allocators.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\cursorstreamwrapper.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\document.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\encodedstream.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\encodings.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\error\en.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\error\error.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\filereadstream.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\filewritestream.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\fwd.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\biginteger.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\diyfp.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\dtoa.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\ieee754.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\itoa.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\meta.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\pow10.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\regex.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\stack.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\strtod.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\internal\swap.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\memorybuffer.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\memorystream.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\msinttypes\inttypes.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\msinttypes\stdint.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\pointer.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\prettywriter.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\rapidjson.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\reader.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\schema.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\stream.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\stringbuffer.h" />
+    <ClInclude Include="src\Utility\json_loader\rapidjson\writer.h" />
+    <ClInclude Include="src\Utility\Number\cNumber.h" />
+    <ClInclude Include="src\Utility\SaveData\cSaveData.h" />
+    <ClInclude Include="src\Utility\StrControl\StrControl.h" />
+    <ClInclude Include="src\Utility\Timer\cTimer.h" />
+    <ClInclude Include="src\Utility\Vector\cVector2.h" />
+    <ClInclude Include="src\Utility\Vector\cVector3.h" />
+    <ClInclude Include="src\Utility\memory.h" />
+    <ClInclude Include="src\Utility\utility.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FMGameBase.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
