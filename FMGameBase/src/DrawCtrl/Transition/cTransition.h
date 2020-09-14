@@ -66,6 +66,8 @@ public:
 	// Setter
 	inline void SetTransTime(float time) { m_fTransTime = time; };
 	inline void SetTransDirection(TransDirection value) { m_eTransDirection = value; value == TransDirection::TRANS_IN ? m_fBorderParam = 0.0f : m_fBorderParam = (float)BORDER_MAX; };
+	inline void SetBorderParam(float param) { m_fBorderParam = param; };
+	inline void SetBorderRange(BorderRange range) { m_eBorderRange = range; };
 
 private:
 	//---------------------------------------------------------------------
