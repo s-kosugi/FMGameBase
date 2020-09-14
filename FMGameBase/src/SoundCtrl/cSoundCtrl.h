@@ -25,9 +25,9 @@ public:
 		NUM
 	};
 
-	void Initialize(void);
-	void Update(void);
-	IBaseObject* Finalize(void);
+	void Initialize(void) override;
+	void Update(void) override;
+	IBaseObject* Finalize(void) override;
 
 	// サウンドの読み込み
 	// 引数 : id サウンドのID   bufnum 同時再生可能数

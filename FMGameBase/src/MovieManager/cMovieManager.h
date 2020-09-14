@@ -22,13 +22,13 @@ public:
 	};
 
 	// 初期化
-	void Initialize(void);
+	void Initialize(void) override;
 
 	// 更新
-	void Update(void);
+	void Update(void) override;
 
 	// 破棄
-	IBaseObject* Finalize(void);
+	IBaseObject* Finalize(void) override;
 
 	// 動画ファイルの読み込み
 	void Load(std::string filename);

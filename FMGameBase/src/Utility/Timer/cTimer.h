@@ -25,9 +25,9 @@ public:
 	// scale : タイムスケール(1.0が等速)
 	void    Setup(float limit, float scale);
 	// 更新
-	void    Update(void);
+	void    Update(void) override;
 	// リセット
-	inline void    Reset(void) { m_fCurrentTime = 0.0f; };
+	inline void    Reset(void) override { m_fCurrentTime = 0.0f; };
 
 	// 終了判定
 	// ret : true 指定時間を経過した false 指定時間を経過していない

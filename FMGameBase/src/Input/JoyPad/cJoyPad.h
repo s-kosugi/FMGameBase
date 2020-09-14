@@ -15,13 +15,13 @@ class cJoyPad : public IBaseObject
 {
 public:
 	// 初期化
-	void Initialize(void);
+	void Initialize(void) override;
 
 	// 更新
-	void Update(void);
+	void Update(void) override;
 
 	// 破棄
-	IBaseObject* Finalize(void);
+	IBaseObject* Finalize(void) override;
 
 	// ボタン押下チェック
 	bool CheckButton(unsigned int kcode, int InputType = DX_INPUT_PAD1); // 押しているか

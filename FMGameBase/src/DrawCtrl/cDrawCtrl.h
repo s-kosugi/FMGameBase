@@ -23,9 +23,9 @@
 class cDrawCtrl : public IBaseObject
 {
 public:
-	void Initialize(void);
+	void Initialize(void) override;
 	void Draw(void);
-	IBaseObject* Finalize(void);
+	IBaseObject* Finalize(void) override;
 
 	// 描画オブジェクトの登録
 	void RegistDrawObject(cSprite& obj, const std::string& filename);

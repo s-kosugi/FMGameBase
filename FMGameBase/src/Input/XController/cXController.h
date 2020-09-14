@@ -25,10 +25,10 @@ public:
 	};
 
 	// 初期化
-	void Initialize(void);
+	void Initialize(void) override;
 
 	// 更新
-	void Update(void);
+	void Update(void) override;
 
 	// ボタン押下チェック
 	bool CheckButton(unsigned int kcode, int InputType = DX_INPUT_PAD1); // 押しているか
@@ -159,7 +159,7 @@ private:
 	cXController& operator = (const cXController& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cXController& GetInstance(void) {
 		static cXController instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

@@ -19,13 +19,13 @@ class cEffectManager : public IBaseObject
 public:
 
 	// ‰Šú‰»
-	void Initialize(void);
+	void Initialize(void) override;
 
 	// XV
-	void Update(void);
+	void Update(void) override;
 
 	// ”jŠü
-	IBaseObject* Finalize(void);
+	IBaseObject* Finalize(void) override;
 
 	// ¶¬
 	cEffectObject* Create(EFFECT_ID id,cVector2 pos);

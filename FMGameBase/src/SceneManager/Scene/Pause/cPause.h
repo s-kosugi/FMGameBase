@@ -19,9 +19,9 @@ public:
 	cPause(IBaseObject* parent);
 	~cPause(void);
 
-	void Initialize(void);
-	void Update(void);
-	IBaseObject* Finalize(void);
+	void Initialize(void) override;
+	void Update(void) override;
+	IBaseObject* Finalize(void) override;
 
 };
 //================================================================================================

@@ -18,7 +18,7 @@ public:
 	cChargeEffect(IBaseObject* parent);
 	~cChargeEffect(void);
 
-	void Initialize(void);
+	void Initialize(void) override;
 
 private:
 	// ’è”	

@@ -14,10 +14,10 @@ class cKeyboard : public IBaseObject
 {
 public:
 	// 初期化
-	void Initialize(void);
+	void Initialize(void) override;
 
 	// 更新
-	void Update( void );
+	void Update( void ) override;
 
 	// キー押下チェック
 	bool CheckButton(unsigned int kcode); // 押しているか
@@ -44,7 +44,7 @@ private:
 	cKeyboard& operator = (const cKeyboard& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cKeyboard& GetInstance(void) {
 		static cKeyboard instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

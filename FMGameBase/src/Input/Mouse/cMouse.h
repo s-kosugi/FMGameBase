@@ -14,8 +14,8 @@
 class cMouse : public IBaseObject
 {
 public:
-	void Initialize(void);
-	void Update(void);
+	void Initialize(void) override;
+	void Update(void) override;
 
 	// マウスボタン押下チェック
 	bool CheckButton(unsigned int kcode); // 押しているか
@@ -45,7 +45,7 @@ private:
 	cMouse& operator = (const cMouse& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cMouse& GetInstance(void) {
 		static cMouse instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

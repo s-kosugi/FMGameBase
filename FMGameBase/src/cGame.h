@@ -18,8 +18,8 @@
 class cGame : public IBaseObject
 {
 public:
-	void Initialize(void);
-	void Update(void);
+	void Initialize(void) override;
+	void Update(void) override;
 	void Draw(void);
 
 
@@ -112,7 +112,7 @@ private:
 	cGame& operator = (const cGame& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cGame& GetInstance(void) {
 		static cGame instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

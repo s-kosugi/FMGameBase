@@ -18,7 +18,7 @@ public:
 	cHitEffect(IBaseObject* parent);
 	~cHitEffect(void);
 
-	void Initialize(void);
+	void Initialize(void) override;
 
 private:
 	// ’è”	

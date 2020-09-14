@@ -18,8 +18,8 @@
 class cSceneManager : public IBaseObject
 {
 public:
-	void Initialize(void);
-	void Update(void);
+	void Initialize(void) override;
+	void Update(void) override;
 
 	// シーン変更演出タイプ
 	enum class CHANGE_TYPE
@@ -116,7 +116,7 @@ private:
 	cSceneManager& operator = (const cSceneManager& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cSceneManager& GetInstance(void) {
 		static cSceneManager instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

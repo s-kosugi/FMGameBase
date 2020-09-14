@@ -19,8 +19,8 @@ class cCamera : public IBaseObject
 {
 public:
 
-	void Initialize(void);
-	void Update(void);
+	void Initialize(void) override;
+	void Update(void) override;
 
 	// カメラの回転
 	// 現在の位置から注視点を基準に水平回転した位置にカメラを変更する
@@ -63,7 +63,7 @@ private:
 	cCamera& operator = (const cCamera& t) {};  // オブジェクトの複製禁止(代入演算子のオーバーロード)
 public:
 	// シングルトンオブジェクトにはDELETEアクセスをさせない。
-	IBaseObject* Finalize(void) { IBaseObject::Finalize(); return nullptr; };
+	IBaseObject* Finalize(void) override { IBaseObject::Finalize(); return nullptr; };
 
 	static cCamera& GetInstance(void) {
 		static cCamera instance;   // 唯一の実体であるオブジェクト、static変数を使用する事で１つの共有の変数となる

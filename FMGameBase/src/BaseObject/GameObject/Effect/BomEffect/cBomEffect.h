@@ -18,7 +18,7 @@ public:
 	cBomEffect(IBaseObject* parent);
 	~cBomEffect(void);
 
-	void Initialize(void);
+	void Initialize(void) override;
 
 private:
 	// ’è”	
