@@ -93,3 +93,20 @@ bool cTransition::IsEnd(void)
 	}
 	return false;
 }
+
+//==========================================================================================
+//  ƒgƒ‰ƒ“ƒWƒVƒ‡ƒ“•ûŒü‚Ìİ’è
+//==========================================================================================
+void cTransition::SetTransDirection(cTransition::TransDirection value)
+{
+	m_eTransDirection = value;
+	if (value == TransDirection::TRANS_IN)
+	{
+		m_fBorderParam = 0.0f;
+	}
+	else
+	{
+		m_fBorderParam = (float)BORDER_MAX;
+	}
+	m_cTimer.Reset();
+}

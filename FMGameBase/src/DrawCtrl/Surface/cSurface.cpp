@@ -25,7 +25,10 @@ cSurface::cSurface(int width, int height, int beginPriority, int endPriority, bo
 	m_nMonoBlue(0),
 	m_nMonoRed(0),
 	m_nGaussPixelWidth(8),
-	m_nGaussParam(1000)
+	m_nGaussParam(1000),
+	m_nHSBHue(0),
+	m_nHSBSaturation(0),
+	m_nHSBBright(0)
 {
 	m_Rect.left = 0;
 	m_Rect.top = 0;

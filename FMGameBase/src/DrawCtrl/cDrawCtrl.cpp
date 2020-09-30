@@ -519,6 +519,8 @@ bool cDrawCtrl::DrawSurface(cSurface* obj)
 	{
 	case cSurface::FILTER_MODE::MONO: GraphFilter(obj->m_nGraphHandle, DX_GRAPH_FILTER_MONO, obj->GetMonoBlue(), obj->GetMonoRed()); break;
 	case cSurface::FILTER_MODE::GAUSS: GraphFilter(obj->m_nGraphHandle, DX_GRAPH_FILTER_GAUSS, obj->GetGaussPixelWidth(), obj->GetGaussParam()); break;
+	case cSurface::FILTER_MODE::HSB: GraphFilter(obj->m_nGraphHandle, DX_GRAPH_FILTER_HSB, 0, obj->GetHSBHue(), obj->GetHSBSaturation(), obj->GetHSBBright()); break;
+	case cSurface::FILTER_MODE::INVERT: GraphFilter(obj->m_nGraphHandle, DX_GRAPH_FILTER_INVERT); break;
 	default: break;
 	}
 

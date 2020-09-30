@@ -25,8 +25,10 @@ public:
 	// フィルターモード
 	enum class FILTER_MODE {
 		NONE,
-		MONO,
-		GAUSS,
+		MONO,		// モノトーン
+		GAUSS,		// ガウス
+		HSB,		// 色相・再度・明度
+		INVERT,		// 階調の反転
 	};
 
 	// Getter
@@ -41,6 +43,9 @@ public:
 	inline int			GetMonoRed(void) { return m_nMonoRed; };
 	inline int			GetGaussPixelWidth(void) { return m_nGaussPixelWidth; };
 	inline int			GetGaussParam(void) { return m_nGaussParam; };
+	inline int			GetHSBHue(void) { return m_nHSBHue; }
+	inline int			GetHSBSaturation(void) { return m_nHSBSaturation; }
+	inline int			GetHSBBright(void) { return m_nHSBBright; }
 	inline bool			IsShow(void) { return m_bShow; };
 
 	// Setter
@@ -57,6 +62,9 @@ public:
 	inline void SetMonoRed(int param) { m_nMonoRed = param; };
 	inline void SetGaussPixelWidth(int param) { m_nGaussPixelWidth = param; };
 	inline void SetGaussParam(int param) { m_nGaussParam = param; };
+	inline void SetHSBHue(int hue) { m_nHSBHue = hue; };
+	inline void SetHSBSaturation(int saturation) { m_nHSBSaturation = saturation; };
+	inline void SetHSBBright(int bright) { m_nHSBBright = bright; };
 	inline void SetShow(bool flg) { m_bShow = flg; };
 
 protected:
@@ -83,4 +91,13 @@ protected:
 	int			m_nGaussPixelWidth;
 	// ガウスフィルタ用ぼかしパラメータ(100で1ピクセル分の幅)
 	int			m_nGaussParam;
+
+	// HSB用色相設定(-180～180)
+	int			m_nHSBHue;
+	// HSB用彩度設定(-255～)
+	int			m_nHSBSaturation;
+	// HSB用明度設定(-255～255)
+	int			m_nHSBBright;
+
+
 };
