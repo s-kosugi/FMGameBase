@@ -15,7 +15,7 @@
 //==========================================================================================
 cSurface::cSurface(int width, int height, int beginPriority, int endPriority, bool alpha) :
 	IDrawBase(),
-	m_vAngle(0.0f, 0.0f, 0.0f),
+	m_fAngle(0.0f),
 	m_vCenter(0.0f, 0.0f),
 	m_Rect({ 0,0,0,0 }),
 	m_nBlendMode(DX_BLENDMODE_ALPHA),

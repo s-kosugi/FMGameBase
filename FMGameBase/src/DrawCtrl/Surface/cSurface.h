@@ -32,7 +32,7 @@ public:
 	};
 
 	// Getter
-	inline cVector3		GetAngle(void) { return m_vAngle; };
+	inline float		GetAngle(void) { return m_fAngle; };
 	inline cVector2		GetCenter(void) { return m_vCenter; };
 	inline RECT			GetRect(void) { return m_Rect; };
 	inline int			GetBlendMode(void) { return m_nBlendMode; };
@@ -49,7 +49,7 @@ public:
 	inline bool			IsShow(void) { return m_bShow; };
 
 	// Setter
-	inline void SetAngle(cVector3 angle) { m_vAngle = angle; };
+	inline void SetAngle(float angle) { m_fAngle = angle; };
 	inline void SetCenter(float x, float y) { m_vCenter.x = x; m_vCenter.y = y; };
 	inline void SetCenter(cVector2 center) { m_vCenter = center; };
 	inline void SetRect(RECT rect) { m_Rect = rect; };
@@ -68,7 +68,7 @@ public:
 	inline void SetShow(bool flg) { m_bShow = flg; };
 
 protected:
-	cVector3  m_vAngle;			// 回転
+	float	  m_fAngle;			// 回転
 	cVector2  m_vCenter;		// 中心位置
 	RECT	  m_Rect;			// 描画矩形の始点と終点
 	int		  m_nBlendMode;		// 描画ブレンドモード
